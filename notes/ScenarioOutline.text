@@ -1,0 +1,25 @@
+Scenario Outline in Cucumber =
+one test template that runs many times with different data.
+
+Instead of writing 4 separate scenarios, you write one and feed it a table of values.
+You create a scenario with placeholders:
+
+"<country>"
+"<capital>"
+
+
+Then Cucumber runs it once for each row in the table.
+Why we use Scenario Outline
+
+3 main reasons:
+
+Avoid duplicate scenarios
+
+Test many data sets
+
+Cleaner feature files
+
+Interview answer:
+
+Scenario Outline allows running
+the same scenario with multiple sets of test data using an Examples table.

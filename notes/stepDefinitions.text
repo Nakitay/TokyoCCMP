@@ -1,0 +1,18 @@
+#2- Implementation layer: STEP DEFINITIONS
+	- Technical people implement the "STEP DEFINITIONS" to
+	convert steps (from the feature files) into concrete working actions
+	(using JAVA+SELENIUM in our case)
+
+- WHAT IS THE RUNNING ORDER OF A CUCUMBER BDD PROJECT?
+	- Scenarios are executed in the order the we have in the feature files.
+	- The steps orders that we provide in the feature file will call the java methods that are assigned to them in the step_definitions package.
+
+
+- Why are we not using the TESTNG and using JUNIT?
+	#1- Because the community is using JUNIT more than TestNG.
+		- more questions
+		- more answer
+		- more demand
+		- more opportunities
+
+	#2- We don't need all the annotations that comes from TestNG anyways.

@@ -1,0 +1,43 @@
+-----------------
+- WHAT IS TDD?
+ - BUG FREE DEVELOPMENT
+- WHAT IS THE FLOW OF IMPLEMENTATION FOR TDD?
+ #1- Write unit tests
+ #2- Run the tests
+ #3- Tests will fail
+ #4- Write the code to pass the tests
+ #5- Run the tests again
+ #6- Tests will PASS!
+ #7- Refactore and repeat!
+- WHAT IS BDD?
+ - Behaviour Driven Development
+ - BDD is an extension of TDD.
+ - What does it mean?
+ - It means that the overall implementation flow is very VERY
+similar.
+- HOW IS BDD IS SIMILAR TO TDD?
+ - Instead of writing TESTS, we write SCENARIOS in BDD.
+ - We implement in a similar way in the TDD to turn the Scenarios
+into actions
+ (using
+JAVA+SELENIUM+JUNIT)
+- WHAT ARE THE 2 LAYERS OF BDD?
+#1 - BUSINESS LAYER
+#2 - IMPLEMENTATION LAYER
+#1- BUSINESS LAYER (- Feature files)
+
+ - Feature files are written in Gherkin language (in Cucumber)
+which is basically English
+ - Technical and non-technical people can read and understand these
+documents in details.
+ - Certain keywords are used to make sense in feature files
+ - Feature
+ - Scenario
+ - Given
+ - When
+ - Then
+ #2- IMPLEMENTATION LAYER ( - Step definitions)
+  - We are using the preferred programming language and other tools
+ to implement the scenario that are written in the feature files.
+  - We generate snippets and implement them in the step_definitions
+ package

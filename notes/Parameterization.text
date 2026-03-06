@@ -1,0 +1,12 @@
+PARAMETERIZATION : CUCUMBER EXPRESSIONS
+- Cucumber Expressions (Parameterization) is being able to pass test
+data from the feature files.
+- Using Cucumber Expressions, we can pass String, int, float, {word},
+and even create our own object types to be able to pass from the
+feature file as test data.
+- We are allowed to pass java types, and non-java types.
+- Java types: String, int, float, double, etc...
+- Non-java types: {word}
+- Also we can create our own Object types to be able to pass from
+feature files
+- We can pass more than 1 argument in 1 step.

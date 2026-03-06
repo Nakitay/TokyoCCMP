@@ -1,0 +1,22 @@
+TAKE SCREEN SHOT
+- We use a method that is coming from TakesScreenShot interface coming
+from Selenium Library.
+- Since we are using WebDriver/ChromeDriver object, to be able to use
+the methods that are coming from TakesScreenShot interface, we have to
+cast our object type to TakesScreenShot.
+- After that we will be able to use the method named
+".getScreenshotAs()"
+- We also have a class called Scenario, coming from cucumber.io
+library.
+- This Scenario class' object is keeping track of some of time simple
+data about the scenario that is currently being executed, such as;
+ - If scenario failed or passed
+ - Current scenario name
+ - We can also attach screenshot using this object as well.
+SYNTAX:
+ if (scenario.isFailed()) {
+ byte[] screenshot = ((TakesScreenshot)
+Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+ scenario.attach(screenshot, "image/png", scenario.getName());
+ }
+----------------------------------------------

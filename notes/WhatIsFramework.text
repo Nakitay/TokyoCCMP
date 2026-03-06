@@ -1,0 +1,37 @@
+TELL ME ABOUT YOUR FRAMEWORK?
+- WHAT IS A FRAMEWORK?
+ - Frameworks are basically commonly used, and proven approach of
+creating file and folder structure, creating smart logic (implementing
+design patterns, utilities) to be able to easily handle and maintain
+our project
+- WHY DO WE NEED TO CREATE A FRAMEWORK?
+ - Reusability
+ - Maintainability
+ - Scalability
+ - Accessibility
+ - Managability
+ - Ease of use
+- TELL ME ABOUT YOUR FRAMEWORK?
+ - Basically they want to hear how did you create and structured
+your project, and what did you use in it to make it functional,
+reusable, scalable etc.
+ - What tools we used in our project?
+ - Which programming language we used in our project?
+ - Which testing tools we used in our project?
+ - Which development approach we choose in our project?
+ - What kind of folder structure you created, and why?
+- I used Java programming language.
+- Selenium
+- Junit
+- Cucumber for BDD
+- Cucumber HTML Reports
+- Maven
+- Design patterns:
+ - POM Design Pattern (Pages & WebElements)
+ - Singleton Design Pattern (Driver utility)
+- Created a package where we stored different types of utility classes
+ - BrowserUtils
+ - Driver
+ - ConfigurationReader
+- pom.xml
+- configuration.properties

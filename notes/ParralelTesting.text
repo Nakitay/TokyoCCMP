@@ -1,0 +1,63 @@
+We have Parallel Testing to save time
+Plugin For parallel testing
+Parallel testing = running multiple tests at the same time instead of one by one.
+
+We run Parallel test Under the maven There is the Test on your right side
+
+What changes for TestNG
+1. Runner class changes
+JUnit runner (what you have now)
+@RunWith(Cucumber.class)
+@CucumberOptions(
+   features="src/test/resources/features",
+   glue="step_definitions",
+   tags="@smoke"
+)
+public class CukesRunner {}
+
+TestNG runner
+package runners;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+    features = "src/test/resources/features",
+    glue = "step_definitions",
+    tags = "@smoke",
+    plugin = {"pretty","html:target/report.html"}
+)
+public class TestRunner extends AbstractTestNGCucumberTests {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Short real answer (for jobs): → use TestNG
+1️⃣ TestNG — better for automation jobs
+Most companies use:
+Selenium + Cucumber + TestNG
+Why:
+Parallel execution ✅
+Better reports ✅
+DataProvider ✅
+Retry failed tests ✅
+More control for CI/CD ✅
+Interview answer:
+I prefer TestNG because it supports parallel execution and better test management.

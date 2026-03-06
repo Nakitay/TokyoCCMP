@@ -1,0 +1,64 @@
+BACKGROUND:
+ - Background is very similar to @BeforeMethod in TestNG.
+ - @BeforeMethod runs before each test in that specific class.
+ - Background steps will be executed once before each scenario in
+that feature file.
+ - It will be executed ONCE.
+ - It will only work for the scenarios in the same feature
+file.
+ - We need to make sure from where the Background left off, all
+of the scenarios should be able to pick up and continue with the test
+execution.
+
+HOOKS:
+ - Hooks will allow us to create PRE and POST conditions for ALL of
+the scenarios in our project.
+ - Hooks class is separated from the feature file.
+ - Because we will be using programming logic, we will store the
+Hooks class under 'step_definitions' package
+- What are the differences between the "Background" and "Hooks"?
+ - Background is for the "BUSINESS" side of the BDD. (for the nontechnical people)
+ - HOOKS is for the "IMPLEMENTATION" side of the BDD (for the
+technical people)
+- By default:
+ - Background only applies to all of the scenario in the same
+feature file.
+ - Hooks will apply to all of the scenarios in the PROJECT.
+ - BUT! We can use @Tags to limit which scenarios these @Before
+@After will apply.
+ - If we have more than one @Before @After, we can run them in the
+order we want them to be executed using "order=1". The smaller the
+number, the earlier it will be executed.
+- @Before : This will be executed before all of the scenarios
+- @After : This will be executed AFTER all of the scenarios
+- @BeforeStep : This will be executed before all of the STEPS in ALL
+OF THE SCENARIOS
+- @AfterStep : This will be executed AFTER all of the STEPS in ALL
+OF THE SCENARIOS
+- These method can be used for different types of setups and teardowns
+ - opening browser
+ - maximizing browser
+ - connecting database
+ - close connection to database
+ - close the browser
+ @Before (order = 1)
+ public void setupMethod(){
+ System.out.println("---> @Before: RUNNING BEFORE EACH
+SCENARIO");
+ }
+ @After
+ public void teardownMethod(){
+ System.out.println("---> @After: RUNNING AFTER EACH
+SCENARIO");
+ }
+ @BeforeStep
+ public void setupStep(){
+ System.out.println("-----> @BeforeSTEP : Running before each
+step!");
+ }
+ @AfterStep
+ public void teardownStep(){
+ System.out.println("-----> @AfterSTEP : Running after each
+step!");
+ }
+----------------------------------------------------------------------

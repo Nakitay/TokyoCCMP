@@ -1,0 +1,22 @@
+
+What is PAGE OBJECT MODEL DESIGN PATTERN?
+- Create a separate .java class for each page of the application.
+- Store the web elements in their own java class.
+- We can also store any relevant method specific to that page.
+- The only important structural point of the project we didn't centralize yet was the LOCATORS of our project.
+- Using POM Design Pattern now we will centralize our locators (WebElements) in their own respective Java classes.
+
+How are we going to implement POM Design Pattern?
+#1- Every time we create a java class for a new page of our application, we will initialize our driver instance with the object of that class.
+	- This will ensure, when we use the object of that class, the object will allow us to reach to the WebElements we store in that specific class.
+
+	LoginPage{
+        public LoginPage(){
+			PageFactory.initElements(driver, this);
+		}
+}
+
+#2- Instead of using .findElement() method, we will use @FindBy annotations.
+
+@FindBy(id='locator')
+public WebElement searchBar;
