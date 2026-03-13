@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import java.net.URL;
 
 import java.time.Duration;
 
@@ -65,9 +67,29 @@ public class Driver {
 //                        break;
                     //---------- we test without opening browser -----------------
 
+
+                    case "grid-chrome":
+                        try {
+
+                            ChromeOptions options = new ChromeOptions();
+
+                            driverPool.set(new RemoteWebDriver(
+                                    new URL("http://localhost:4444"),
+                                    options
+                            ));
+
+                            driverPool.get().manage().window().maximize();
+                            driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
                 }
 
-            }
+                }
+
+
 
             return driverPool.get();
 
