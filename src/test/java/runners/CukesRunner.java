@@ -8,17 +8,28 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        plugin = {
-                "html:target/cucumber-reports.html" ,
-                "rerun:target/rerun.txt"
-
-        },
-        features = "src/test/resources/features",
+@CucumberOptions
+        (features = "src/test/resources/features",
         glue = "step_definitions",
-        dryRun = false,   //we do true to get snippets
-        tags = "" //will run only @smoke annotation scenario
+        plugin = {
+                "pretty",
+                "summary",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+        }
+
 )
+
+
+//        plugin = {
+//                "html:target/cucumber-reports.html" ,
+//                "rerun:target/rerun.txt"
+//
+//        },
+//        features = "src/test/resources/features",
+//        glue = "step_definitions",
+//        dryRun = false,   //we do true to get snippets
+//        tags = "" //will run only @smoke annotation scenario
+//)
 
 public class CukesRunner {
 
