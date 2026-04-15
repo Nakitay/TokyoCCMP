@@ -40,8 +40,8 @@ public class GoogleStepsStepDef {
 
     @Then("user sees apple in the page title")
     public void userSeesAppleInThePageTitle() {
-        Assert.assertTrue(false);
-        //Assert.assertTrue(Driver.getDriver().getTitle().toLowerCase().contains("apple"));
+       // Assert.assertTrue(false);
+        Assert.assertTrue(Driver.getDriver().getTitle().toLowerCase().contains("apple"));
     }
 
     @When("user types orange in the google search box and click enter")
